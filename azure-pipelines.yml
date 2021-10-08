@@ -19,8 +19,8 @@ steps:
     displayName: 'Install Node.js'
 
   - script: |
-      git config --global user.name "$(VISUALLABSKFT)"
-      git config --global user.email "$(balazs.horvath@visuallabs.hu)"
+      git config --global user.name "${VISUALLABSKFT}"
+      git config --global user.email "${balazs.horvath@visuallabs.hu}"
       git checkout -b main
       echo "machine github.com login ${VISUALLABSKFT} password ${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}" > ~/.netrc
       yarn && GIT_USER=VISUALLABSKFT yarn deploy
