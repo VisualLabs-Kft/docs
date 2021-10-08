@@ -27,5 +27,5 @@ steps:
     env:
       GH_NAME: $(VisualLabsKft)
       GH_EMAIL: $(balazs.horvath@visuallabs.hu)
-      GH_TOKEN: $(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)
+      GH_TOKEN: $(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)
     displayName: 'yarn install and build'
