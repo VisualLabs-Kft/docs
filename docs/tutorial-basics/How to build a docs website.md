@@ -152,7 +152,7 @@ steps:
 
   - task: NodeTool@0
     inputs:
-      versionSpec: '10.x'
+      versionSpec: '12.x'
     displayName: 'Install Node.js'
 
   - script: |
@@ -171,9 +171,7 @@ steps:
 - This will queue the job and you can monitor the run.
 - aaaaand.... this is where we get the following error message:
 
-```cmdlet
-error @docusaurus/core@2.0.0-beta.6: The engine "node" is incompatible with this module. Expected version ">=12.13.0". Got "10.24.1"
-```
+
 
 ________________________________________
 
