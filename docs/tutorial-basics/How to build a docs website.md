@@ -137,6 +137,7 @@ The [Docusaurus deployment guide](https://docusaurus.io/docs/deployment#using-az
 - Select node.js on the Configuration wizard.
 - Copy-paste the YAML script below (with modified TOKEN, E-mail and GitHubName) and click 'Save and Run', the system will ask if you want any futher commit message.
 - Click save and run again and a new commit will be pushed.
+  
 
  ```YAML
  trigger:
