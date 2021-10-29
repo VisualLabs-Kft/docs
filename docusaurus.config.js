@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
-  title: 'Visual Labs Docs',
+  title: 'Visual Labs Docs 2',
   tagline: '<valami frappáns>',
   url: 'https://visuallabskft.github.io',
   baseUrl: '/docs/',
@@ -13,7 +13,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   favicon: 'img/favicon.ico',
   organizationName: 'VisualLabsKft', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
-  GIT_USER: 'VisualLabsKft'
 
   presets: [
     [
