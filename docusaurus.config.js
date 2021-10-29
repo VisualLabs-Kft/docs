@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'Visual Labs Docs 2',
   tagline: '<valami frappáns>',
-  url: 'https://visuallabskft.github.io',
-  baseUrl: '/docs/',
+  url: 'https://agreeable-smoke-0b9e33a03.azurestaticapps.net',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
