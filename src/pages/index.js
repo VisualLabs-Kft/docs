@@ -43,7 +43,7 @@ function HomepageHeader() {
         {userInfo ? (
           <p>Hello {userInfo.userDetails}</p>
         ) : (
-          <p>Please sign in!: {userInfo.userDetails}</p>
+          <p>Please sign in!</p>
         )}
         <br></br>
         <div className={styles.buttons}>
