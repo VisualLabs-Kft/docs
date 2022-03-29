@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
@@ -6,8 +6,26 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 
+function useUserInfo() {
+  const [userInfo, setUserInfo] = useState(null);
+
+  useEffect(() => {
+    async function getUserInfo() {
+      const response = await fetch("/.auth/me");
+      const payload = await response.json();
+      const { clientPrincipal } = payload;
+      return clientPrincipal;
+    }
+
+    getUserInfo().then((ui) => setUserInfo(ui));
+  }, []);
+
+  return userInfo;
+}
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const userInfo = useUserInfo();
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
@@ -23,12 +41,21 @@ function HomepageHeader() {
         </div>
         <br></br>
         <div className={styles.buttons}>
-          <a
-            href="/.auth/login/aad"
-            className="button button--secondary button--lg"
-          >
-            Login
-          </a>
+          {userInfo ? (
+            <a
+              href="/.auth/login/aad"
+              className="button button--secondary button--lg"
+            >
+              Login
+            </a>
+          ) : (
+            <a
+              href="/.auth/logout"
+              className="button button--secondary button--lg"
+            >
+              Logout
+            </a>
+          )}
         </div>
       </div>
     </header>
