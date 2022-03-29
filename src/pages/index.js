@@ -40,20 +40,26 @@ function HomepageHeader() {
           </Link>
         </div>
         <br></br>
+        {userInfo ? (
+          <p>Hello {userInfo.userDetails}</p>
+        ) : (
+          <p>Please sign in!: {userInfo.userDetails}</p>
+        )}
+        <br></br>
         <div className={styles.buttons}>
           {userInfo ? (
-            <a
-              href="/.auth/login/aad"
-              className="button button--secondary button--lg"
-            >
-              Login
-            </a>
-          ) : (
             <a
               href="/.auth/logout"
               className="button button--secondary button--lg"
             >
               Logout
+            </a>
+          ) : (
+            <a
+              href="/.auth/login/aad"
+              className="button button--secondary button--lg"
+            >
+              Login
             </a>
           )}
         </div>
