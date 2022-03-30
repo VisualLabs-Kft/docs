@@ -1,11 +1,11 @@
 {
   "routes": [
     {
-      "route": "/docs",
+      "route": "/docs/*",
       "allowedRoles": ["authenticated"]
     },
     {
-      "route": "/blog",
+      "route": "/blog/*",
       "allowedRoles": ["authenticated"]
     },
     {
