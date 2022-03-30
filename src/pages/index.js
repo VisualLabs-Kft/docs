@@ -48,17 +48,11 @@ function HomepageHeader() {
         <br></br>
         <div className={styles.buttons}>
           {userInfo ? (
-            <a
-              href="/.auth/logout"
-              className="button button--secondary button--lg"
-            >
+            <a href="/logout" className="button button--secondary button--lg">
               Logout
             </a>
           ) : (
-            <a
-              href="/.auth/login/aad"
-              className="button button--secondary button--lg"
-            >
+            <a href="/login" className="button button--secondary button--lg">
               Login
             </a>
           )}
